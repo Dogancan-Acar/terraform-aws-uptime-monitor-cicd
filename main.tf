@@ -13,6 +13,7 @@ resource "aws_instance" "uptime-server" {
   
   tags = {
     Name = "Uptime-server"
+    Enviroment = "Just try"
   }
 
 
