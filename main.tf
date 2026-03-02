@@ -1,3 +1,10 @@
+terraform {
+  backend "s3" {
+    bucket = "dogancan-uptime-tfstate-bucket-0003" 
+    key    = "prod/terraform.tfstate"              
+    region = "eu-central-1"
+  }
+}
 resource "aws_instance" "uptime-server" {
   ami = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
