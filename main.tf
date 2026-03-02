@@ -29,3 +29,11 @@ data "aws_ami" "ubuntu" {
     values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
   }
 }
+
+resource "aws_s3_bucket" "terraform_state" {
+  bucket = "dogancan-uptime-tfstate-bucket-0003" 
+
+  lifecycle {
+    prevent_destroy = true # 
+  }
+}
