@@ -2,7 +2,7 @@ resource "aws_instance" "uptime-server" {
   ami = var.ami
   instance_type = var.instance_type
   key_name = var.key_name  
-  vpc_security_group_ids = [aws_security_group.api_sg]
+  vpc_security_group_ids = [aws_security_group.api_sg.id]
   
   tags = {
     Name = "Uptime-server"

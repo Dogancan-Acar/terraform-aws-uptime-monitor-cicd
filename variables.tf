@@ -12,7 +12,7 @@ variable "ami" {
 variable "security_group_name" {
   description = "Name to use on security group created"
   type        = string
-  default     = "sg-api-project"
+  default     = "api-sg"
 }
 variable "instance_type" {
   description = "EC2 instance type"
