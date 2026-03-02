@@ -32,12 +32,12 @@ The heart of this project is its zero-touch deployment model. The GitHub Actions
 *Visual evidence of the automated CI/CD pipeline and the deployed Docker container:*
 
 ### 1. Autonomous CI/CD Pipeline (GitHub Actions)
-*(Terraform seamlessly planning and applying infrastructure changes via remote state)*
+*(Terraform seamlessly planning and applying infrastructure changes)*
 <img width="1920" height="1080" alt="Screenshot from 2026-03-03 00-55-24" src="https://github.com/user-attachments/assets/cb538963-d7cb-4b96-a1a5-286fd31364b6" />
 
 
 ### 2. Live Dockerized FastAPI on AWS EC2
-*(The Uptime Monitor API successfully running and serving traffic via AWS EC2 Public IP)*
+*(The Uptime Monitor API successfully running and serving traffic*
 <img width="1920" height="1080" alt="Screenshot from 2026-03-03 00-56-42" src="https://github.com/user-attachments/assets/f94c1d3a-5982-4271-8726-4ec6f8ce4150" />
 
 
