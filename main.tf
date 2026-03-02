@@ -1,5 +1,5 @@
 resource "aws_instance" "uptime-server" {
-  ami = var.ami
+  ami = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
   key_name = var.key_name  
   vpc_security_group_ids = [aws_security_group.api_sg.id]
@@ -11,11 +11,21 @@ resource "aws_instance" "uptime-server" {
 
 user_data = <<-EOF
             #!/bin/bash
-            sudo apt -get update -y
-            sudo apt -get install docker.io -y
+            sudo apt-get update -y
+            sudo apt-get install docker.io -y
             sudo systemctl start docker
             sudo systemctl enable docker
             sudo docker run -d -p 8080:80 ${var.docker_image}
             EOF 
 
+}
+
+data "aws_ami" "ubuntu" {
+  most_recent = true
+  owners      = ["099720109477"]
+
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
+  }
 }

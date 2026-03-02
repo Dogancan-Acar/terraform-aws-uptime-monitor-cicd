@@ -4,11 +4,6 @@ variable "region" {
   default     = "eu-central-1"
 }
 
-variable "ami" {
-  description = "ID of AMI to use for the instance"
-  type        = string
-  default     = "ami-0e5467d64d955c6d5"
-}
 variable "security_group_name" {
   description = "Name to use on security group created"
   type        = string
